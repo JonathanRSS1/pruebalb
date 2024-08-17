@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ITEM_CARD_PACIENTE">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main"
+
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:cardBackgroundColor="#3DA4AD"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+
+        app:cardUseCompatPadding="true"
+        app:contentPadding="20dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="344dp"
+            android:layout_height="201dp"
+            android:background="#3DA4AD"
+            app:layout_constraintBottom_toBottomOf="@+id/lblTicketInfo2"
+            app:layout_constraintTop_toBottomOf="@+id/lblTicketInfo2">
+
+            <ImageView
+                android:id="@+id/imgPatient"
+                android:layout_width="103dp"
+                android:layout_height="74dp"
+                android:layout_marginTop="3dp"
+                android:foreground="@drawable/baseline_account_circle_24"
+                app:layout_constraintBottom_toTopOf="@+id/lblPatientName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_profile" />
+
+            <ImageView
+                android:id="@+id/btnPatientInformation"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="103dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnEdit"
+                app:layout_constraintStart_toEndOf="@+id/btnDelete"
+                app:srcCompat="@drawable/baseline_patient_information"
+                tools:layout_editor_absoluteY="98dp" />
+
+            <ImageView
+                android:id="@+id/btnEdit"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:alpha="0.8"
+                app:layout_constraintBottom_toBottomOf="@+id/lblPatientInfo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnPatientInformation"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="104dp"
+                android:alpha="0.8"
+                app:layout_constraintBottom_toBottomOf="@+id/lblPatientInfo"
+                app:layout_constraintEnd_toStartOf="@+id/btnPatientInformation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnEdit"
+                app:srcCompat="@drawable/ic_delete" />
+
+            <TextView
+                android:id="@+id/lblPatientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del paciente"
+                app:layout_constraintBottom_toTopOf="@+id/btnPatientInformation"
+                tools:layout_editor_absoluteX="110dp" />
+
+            <TextView
+                android:id="@+id/lblPatientInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver expediente"
+                tools:layout_editor_absoluteX="125dp"
+                tools:layout_editor_absoluteY="153dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
